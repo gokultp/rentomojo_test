@@ -54,6 +54,7 @@ fs.appendFile(FILE_NAME, '"text","href"\r\n', function () {
 
 function startScrape(data) {
     Queue.push(data, function (err, res) {
+        console.log('scraped----->', data.href);
         if(res){
             res.forEach(function(element) {
 
